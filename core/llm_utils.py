@@ -88,15 +88,21 @@ class LLMUtils:
         return response
     
     def correct_french_accents(self, word: str) -> str:
-        prompt = f"""Correct the accents in the French word or phrase "{word}". 
-        Return only the corrected French word/phrase with proper accents (é, è, ê, ë, à, â, ä, ç, î, ï, ô, ö, ù, û, ü, ÿ). 
-        Do not explain or add any other text.
-        Do not add any extra spaces or punctuation.
-        """
+        prompt = f"""Correct any accent errors in this French text: "{word}"
+        
+        Important rules:
+        1. Return ONLY the corrected French text with proper accents (é, è, ê, ë, à, â, ä, ç, î, ï, ô, ö, ù, û, ü, ÿ)
+        2. Do not change correct accents that are already present
+        3. If the input has no accent errors, return it exactly as-is
+        4. Never add any explanation, commentary, or additional text
+        5. Preserve all capitalization, spaces, and punctuation exactly as in the input
+        6. Do not modify the text in any way other than correcting accents
 
+        Return ONLY the corrected text:"""
+        
         response = self.llms["french_accent_correction"].invoke(prompt).content.strip()
-    
         return response
+        
             
         
         
