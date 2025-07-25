@@ -13,7 +13,8 @@ class LLMUtils:
             "translator": ChatOllama(model=LLM_MODELS["translator"]),
             "evaluator": ChatOllama(model=LLM_MODELS["evaluator"]),
             "word_helper": ChatOllama(model=LLM_MODELS["word_helper"]),
-            "french_word_meaning" : ChatOllama(model=LLM_MODELS["french_word_meaning"])
+            "french_word_meaning" : ChatOllama(model=LLM_MODELS["french_word_meaning"]),
+            "french_accent_correction" : ChatOllama(model=LLM_MODELS["french_accent_correction"])
         }
         
     def get_french_translation(self, english_text: str) -> str:
@@ -63,9 +64,9 @@ class LLMUtils:
 
                     Example Output:
 
-                    **POS**: verb  
-                    **Meaning**: to eat
-                    **Infinitive**: manger \n
+                    **POS**: verb\n
+                    **Meaning**: to eat\n
+                    **Infinitive**: manger\n
                     **Conjugations**:  
                     je: mange  
                     tu: manges  
@@ -85,7 +86,18 @@ class LLMUtils:
         response = self.llms["french_word_meaning"].invoke(prompt).content.strip()
        
         return response
-        
+    
+    def correct_french_accents(self, word: str) -> str:
+        prompt = f"""Correct the accents in the French word or phrase "{word}". 
+        Return only the corrected French word/phrase with proper accents (é, è, ê, ë, à, â, ä, ç, î, ï, ô, ö, ù, û, ü, ÿ). 
+        Do not explain or add any other text.
+        Do not add any extra spaces or punctuation.
+        """
+
+        response = self.llms["french_accent_correction"].invoke(prompt).content.strip()
+    
+        return response
+            
         
         
 llm_utils = LLMUtils()

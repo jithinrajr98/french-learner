@@ -55,24 +55,25 @@ def apply_custom_styles():
         .stButton > button {{
             border-radius: 8px;
             padding: 10px 24px;
-            background: linear-gradient(90deg, {french_blue} 0%, {french_red} 100%);
+            background: {french_blue};  /* Single color instead of gradient */
             color: white;
             border: none;
             font-weight: 500;
             transition: all 0.3s ease;
         }}
-        
-        .stButton > button:hover {{
+       .stButton > button:hover {{
+            background: {french_red};  /* Changes to red on hover */
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(44, 62, 145, 0.2);
         }}
-        
         /* Headers */
         h1 {{
             color: {french_blue};
             font-weight: 500;
             letter-spacing: -0.5px;
-            margin-bottom: 0.5rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 20px;
+            font-size: 1.5rem !important;
         }}
         
         h2 {{
@@ -80,7 +81,8 @@ def apply_custom_styles():
             font-weight: 400;
             border-bottom: 2px solid {french_red};
             padding-bottom: 6px;
-            margin-top: 1.5rem;
+            margin-top: 1.50rem;
+            font-size: 1.0rem !important;
         }}
         
         /* Input fields */
@@ -99,6 +101,7 @@ def apply_custom_styles():
             margin-bottom: 20px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             border: 1px solid rgba(0,0,0,0.05);
+            font-size: 1.0rem !important;
         }}
         
         /* Feedback section */
