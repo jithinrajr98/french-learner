@@ -1,65 +1,52 @@
-Here are the numbered French sentences from the transcript:
 
-1. Bonsoir.
-2. Bienvenue sur Tallback GP.
-3. Nous sommes heureux de débriefer le Grand Prix d'Allemagne.
-4. Marc Marquez a remporté la course.
-5. Il y a encore beaucoup à dire.
-6. D'abord, nous remercions nos partenaires.
-7. Nos partenaires sont FM assurance et Motule.
-8. [Musique].
-9. [Applaudissements].
-10. Commençons le débriefing.
-11. Je suis accompagné de Thomas Morcellino.
-12. Salut Thomas.
-13. Salut Rick.
-14. Thomas est toujours en voyage.
-15. Il est actuellement en Saxe ou en Allemagne.
-16. Michel Turco est également avec nous.
-17. Bonsoir Michel.
-18. Salut à tous.
-19. Désolé pour le décor de chambre d'hôtel.
-20. Les rideaux ne sont pas terribles.
-21. Mais je suis tout près.
-22. C'est là que Michel a logé.
-23. Nous comprenons.
-24. Parlons maintenant de Marc Marquez.
-25. Il a été la star de la course.
-26. Thomas, parle-nous de ses statistiques.
-27. C'est sa 69ème victoire en MotoGP.
-28. Il a dépassé le record d'Agostini.
-29. C'était son 200ème départ.
-30. Son frère a aussi fêté son 100ème départ.
-31. Les chiffres tombaient à pic.
-32. Il a gagné pour la 9ème fois à Saxon Ring.
-33. Il est deuxième au palmarès des victoires sur un même circuit.
-34. Seul Agostini fait mieux à Imatra.
-35. Une victoire de plus et il égalera le record.
-36. Michel, sa victoire était-elle attendue ?
-37. Oui, personne ne doutait de lui.
-38. Il a été malin pendant les essais.
-39. Il a utilisé des pneus medium, pas des soft.
-40. Il s'est préparé pour les conditions de course.
-41. Ça a parfaitement fonctionné.
-42. Thomas, un autre fait intéressant.
-43. Depuis 2010, il gagne chaque GP d'Allemagne.
-44. Sauf l'an dernier où il était deuxième.
-45. En 2022, il est tombé avant la course.
-46. En 2023, il a abandonné à l'échauffement.
-47. Pas de course en 2020-21 à cause du COVID.
-48. Mais sinon, il gagne toujours ici.
-49. Ce circuit lui convient parfaitement.
-50. Il a 10 virages à gauche et 3 à droite.
-51. Ses protège-genoux sont spéciaux ici.
-52. Il utilise un protège-genou plus épais à droite.
-53. Ça l'aide pour le soutien.
-54. Personne ne peut le battre ici.
-55. Il mène de 83 points maintenant.
-56. La prochaine course est sur un nouveau circuit.
-57. Mais il va probablement continuer à gagner.
-58. La salle de presse parie sur son titre.
-59. Il reste cependant prudent.
-60. Il dit qu'il reste concentré.
-61. Les erreurs arrivent quand il perd concentration.
-62. Michel, a-t-il dit autre chose ?
-63. Il a un peu plaisanté mais est resté sérieux.
+1. Aujourd'hui, je vais vous montrer comment certains restaurants bidouillent l'addition des touristes étrangers à Paris.  
+2. On va se faire passer pour des touristes américains pour tester ces arnaques.  
+3. Pour notre look de touriste, on a pris un t-shirt typique, une casquette et des lunettes de soleil.  
+4. Des touristes américains se plaignent de notes gonflées dans les restaurants parisiens.  
+5. Certains restaurants facturent des articles plus chers que le prix affiché sur la carte.  
+6. D'autres poussent les touristes à donner un pourboire en disant que le service n'est pas inclus.  
+7. Aux États-Unis, les serveurs dépendent beaucoup des pourboires, contrairement à la France.  
+8. On a testé ces pratiques dans un quartier très touristique de Paris.  
+9. On a invité Marc, un expert en arnaques, pour nous accompagner.  
+10. On est entrés séparément dans le restaurant pour ne pas éveiller les soupçons.  
+11. Marc s'est fait servir une carafe d'eau gratuite, tandis que moi, on m'a apporté une bouteille à 6 €.  
+12. Pour le Coca, Marc a reçu une canette de 33 cl, alors qu'on m'a servi une pinte à 9,50 €.  
+13. La différence entre nos additions était de presque 10 € pour la même commande.  
+14. Les restaurants profitent de la fatigue et de la méconnaissance des touristes.  
+15. Aux États-Unis, les grandes tailles de boissons sont courantes, ce qui justifie des prix abusifs ici.  
+16. Dans un autre restaurant, le serveur a suggéré un pourboire et l'a ajouté directement à ma carte.  
+17. J'ai payé 32 € au lieu de 28 € à cause d'un pourboire forcé de 15 %.  
+18. Encore une fois, on m'a facturé une bouteille d'eau à 6 € au lieu d'une carafe gratuite.  
+19. Certains serveurs mentent en disant que le service n'est pas inclus en France.  
+20. Ces pratiques ne sont pas systématiques, mais elles existent.  
+21. On a interrogé Franck Trouet, directeur du groupement des hôtelleries et restaurations de France.  
+22. Il a qualifié ces comportements d’"escroquerie" et de "honte pour la profession".  
+23. En France, le couvert, l'eau et le pain sont gratuits.  
+24. Un client a le droit de refuser une bouteille d'eau payante.  
+25. Le pourboire n'est pas obligatoire et doit rester un geste volontaire.  
+26. Les TPE proposant des pourboires numériques ont créé une confusion chez les touristes.  
+27. En France, il est rare de laisser 10 à 20 % de pourboire comme aux États-Unis.  
+28. J'ai demandé au serveur pourquoi on m'avait facturé l'eau, mais sa réponse était évasive.  
+29. On a interrogé des touristes américains pour savoir s'ils connaissaient les règles en France.  
+30. Beaucoup ignorent qu'ils peuvent demander une carafe d'eau gratuite.  
+31. Certains croient encore qu'ils doivent payer l'eau en France.  
+32. D'autres laissent un pourboire par habitude, même s'ils savent que ce n'est pas obligatoire.  
+33. Les Américains sont surpris d'apprendre que l'eau est gratuite dans les restaurants français.  
+34. Ces arnaques ciblent surtout les touristes peu familiarisés avec les usages locaux.  
+35. Demander une "carafe d'eau" est un bon réflexe pour éviter les surfacturations.  
+36. Les serveurs malhonnêtes profitent de la barrière linguistique.  
+37. Les prix affichés doivent être respectés, sinon c'est de la tromperie.  
+38. Les touristes doivent vérifier leur addition avant de payer.  
+39. Certains restaurants abusent des attentes des Américains en matière de pourboires.  
+40. La différence culturelle explique en partie ces malentendus.  
+41. Les clients ont le droit de contester une note injustifiée.  
+42. Les professionnels du secteur condamnent ces pratiques frauduleuses.  
+43. Les pourboires en France sont un bonus, pas une obligation.  
+44. Les serveurs qui forcent les pourboires nuisent à l'image de la restauration française.  
+45. Les touristes doivent être informés de leurs droits pour éviter les arnaques.  
+46. Les bouteilles d'eau payantes ne doivent pas être imposées sans consentement.  
+47. Les restaurants honnêtes précisent toujours les options gratuites.  
+48. Les avis en ligne peuvent aider à repérer les établissements douteux.  
+49. Cette enquête montre l'importance de la vigilance en tant que consommateur.  
+50. En résumé : demandez une carafe d'eau et sachez que le pourboire est optionnel !  
+

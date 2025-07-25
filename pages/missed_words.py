@@ -13,6 +13,8 @@ def render_missed_words():
     st.title("📚 Missed Words")
     with st.form("add_word_form"):
         new_word = st.text_input("Enter a French word (minimum 4 letters):").strip()
+        #correct the accents in the word
+        new_word = llm_utils.correct_french_accents(new_word)
         submitted = st.form_submit_button("Add Word")
         if submitted:
             if len(new_word) <= 3:

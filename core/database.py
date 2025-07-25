@@ -44,6 +44,9 @@ def save_missing_words(words: list):
                     continue
                 existing = conn.execute("SELECT 1 FROM missing_words WHERE word = ?", (word,)).fetchone()
                 if not existing:
+                    #correct the accents in the word
+                    word = llm_utils.correct_french_accents(word.strip())
+                    #Get the meaning of the word using LLM
                     meaning = llm_utils.get_french_word_meaning(word)
                     conn.execute("INSERT INTO missing_words (word, meaning) VALUES (?, ?)", (word, meaning))
             conn.commit()
