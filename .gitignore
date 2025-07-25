@@ -4,6 +4,6 @@ __pycache__
 .streamlit
 app_v7_reference_dont_edit.py 
 translation.ipynb
-you_database.db 
+your_database.db 
 missing_words.db
 french_learner.db
