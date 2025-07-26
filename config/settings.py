@@ -11,11 +11,11 @@ TRANSCRIPT_FR = BASE_DIR / "data" / "french_transcript.txt"
 
 # LLM Configuration
 LLM_MODELS = {
-    "translator": "gemma3:1b",
-    "evaluator":   "granite3.1-dense:2b",
-    "word_helper":   "qwen2.5:3b", 
-    "french_word_meaning": "granite3.1-dense:2b",
-    "french_accent_correction" : "granite3.1-dense:2b"
+    "translator": "granite3.3:2b",
+    "evaluator":   "granite3.3:2b",
+    "word_helper":   "granite3.3:2b", 
+    "french_word_meaning": "granite3.3:2b",
+    "french_accent_correction" : "granite3.3:2b"  # phi3.5:3.8b  cogito:3b  granite3.1-dense:2b    granite3.3:2b qwen3:1.7b               
 }
 
 
