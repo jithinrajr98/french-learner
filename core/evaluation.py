@@ -9,7 +9,7 @@ llm_evaluator = ChatOllama(model = LLM_MODELS["evaluator"])
 
 
 def check_translation(original: str, attempt: str, correct: str):
-    prompt = f"""
+    prompt = f"""/no_think
 You are a strict but fair French translation evaluator.
 
 Compare the user's translation to the correct one. Provide:

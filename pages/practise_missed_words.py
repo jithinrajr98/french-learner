@@ -3,6 +3,7 @@ from core.database import get_all_saved_words, delete_saved_word
 import random
 from core.audio import play_audio
 from core.llm_utils import LLMUtils
+import re
 
 llm_utils = LLMUtils()
 
@@ -64,8 +65,12 @@ def render_practise_missed_words():
                             """, unsafe_allow_html=True)
             
             conjugation_response =llm_utils.get_word_details(current_word)
-                    
+            example_sentence = llm_utils.example_generator(current_word)                    
             st.markdown("##### 🔁 Conjugation Info:")
 
             # Format response into readable lines
             st.markdown(conjugation_response)
+            st.markdown("##### 📝 Example Sentence:")
+            st.markdown(example_sentence)
+            play_audio(example_sentence)
+

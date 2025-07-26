@@ -31,7 +31,7 @@ class LLMUtils:
     
     
     def extract_missed_words(self, correct: str, attempt: str) -> List[str]:
-        """Identify missing words from user's translation attempt"""
+        """/nothink Identify missing words from user's translation attempt"""
         prompt = f"""
         Compare these French translations:
         Correct: {correct}
@@ -53,27 +53,14 @@ class LLMUtils:
     def get_word_details(self, french_word: str) -> Dict[str, Any]:
         """Get detailed information about a French word"""
         
-        prompt = f"""
+        prompt = f""" /no_think 
                     Provide detailed information about the French word: "{french_word}"
 
                     Respond in the following structured format:
-                    - pos: part of speech (e.g., noun, verb, adjective)
                     - meaning: English meaning(s)
-                    - infintive: infinitive form of the {french_word}"
-                    - conjugations: present tense conjugations (only if it's a verb)
 
                     Example Output:
-
-                    **POS**: verb\n
                     **Meaning**: to eat\n
-                    **Infinitive**: manger\n
-                    **Conjugations**:  
-                    je: mange  
-                    tu: manges  
-                    il/elle: mange  
-                    nous: mangeons  
-                    vous: mangez  
-                    ils/elles: mangent  
 
                     Only return the structured output above. Do not include any explanations or extra text.
                     """
@@ -81,14 +68,14 @@ class LLMUtils:
         return response
     
     def get_french_word_meaning(self,word: str) -> str:
-        prompt = f"""What does the French word or sentence "{word}" mean in English? Return up to 3 meanings as a single comma seperated list. Do not explain."""
+        prompt = f"""/nothink What does the French word or sentence "{word}" mean in English? Return up to 3 meanings as a single comma seperated list. Do not explain."""
 
         response = self.llms["french_word_meaning"].invoke(prompt).content.strip()
        
         return response
     
     def correct_french_accents(self, word: str) -> str:
-        prompt = f"""Correct any accent errors in this French text: "{word}"
+        prompt = f"""/nothink Correct any accent errors in this French text: "{word}"
         
         Important rules:
         1. Return ONLY the corrected French text with proper accents (é, è, ê, ë, à, â, ä, ç, î, ï, ô, ö, ù, û, ü, ÿ)
@@ -97,12 +84,33 @@ class LLMUtils:
         4. Never add any explanation, commentary, or additional text
         5. Preserve all capitalization, spaces, and punctuation exactly as in the input
         6. Do not modify the text in any way other than correcting accents
-
+        7. Do not add any additional quotes or formatting
         Return ONLY the corrected text:"""
         
         response = self.llms["french_accent_correction"].invoke(prompt).content.strip()
+        response = re.sub(r'^[\'"]|[\'"]$', '', response)
         return response
         
+    def example_generator(self, word: str) -> str:
+        """Generate a simple example sentence in French using the given French word"""
+        
+        prompt = f"""/nothink Generate a very simple example sentence using the French word "{word}".
+        
+        Important rules:
+        1. The sentence should be very simple and easy to understand
+        2. Use basic vocabulary and structure
+        3. Do not include any complex grammar or vocabulary
+        4. Return ONLY the example sentence without any additional text or explanation
+        5. Do not add english translation or commentary
+        6. Sentence should be french only
+        """
+        
+        response = self.llms["word_helper"].invoke(prompt).content.strip()
+        response = re.sub(r'\([^)]*\)', '', response)
+        response = re.sub(r'^[\'"]|[\'"]$', '', response)
+
+
+        return response
             
         
         
