@@ -40,6 +40,7 @@ def render_missed_words():
             
             # Add audio playback button
             if cols[2].button("🔊", key=f"audio_{word}"):
+                print(f"Playing audio for word: {word}")
                 play_audio(word)
             
             if cols[3].button("❌", key=f"delete_{word}"):

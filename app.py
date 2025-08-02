@@ -7,6 +7,8 @@ from pages.missed_words import render_missed_words
 from pages.score_history import render_score_history
 from pages.transcript_viewer import render_transcript
 from pages.practise_missed_words import render_practise_missed_words
+import warnings
+warnings.filterwarnings("ignore")
 
 def main():
     set_page_config()

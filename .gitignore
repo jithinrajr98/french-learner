@@ -8,3 +8,5 @@ your_database.db
 missing_words.db
 french_learner.db
 .gitignore
+static 
+.DS_Store
