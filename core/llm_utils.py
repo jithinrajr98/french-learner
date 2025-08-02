@@ -14,7 +14,8 @@ class LLMUtils:
             "evaluator": ChatOllama(model=LLM_MODELS["evaluator"]),
             "word_helper": ChatOllama(model=LLM_MODELS["word_helper"]),
             "french_word_meaning" : ChatOllama(model=LLM_MODELS["french_word_meaning"]),
-            "french_accent_correction" : ChatOllama(model=LLM_MODELS["french_accent_correction"])
+            "french_accent_correction" : ChatOllama(model=LLM_MODELS["french_accent_correction"]),
+            "youtube_transcript_generator": ChatOllama(model=LLM_MODELS["youtube_transcript_generator"])
         }
         
     def get_french_translation(self, english_text: str) -> str:
@@ -68,16 +69,16 @@ class LLMUtils:
         return response
     
     def get_french_word_meaning(self,word: str) -> str:
-        prompt = f"""/nothink What does the French word or sentence "{word}" mean in English? Return up to 3 meanings as a single comma seperated list. Do not explain."""
+        prompt = f"""What does the French word or sentence "{word}" mean in English? Return up to 3 meanings as a single comma seperated list. Do not explain."""
 
         response = self.llms["french_word_meaning"].invoke(prompt).content.strip()
        
         return response
     
     def correct_french_accents(self, word: str) -> str:
-        prompt = f"""/nothink Correct any accent errors in this French text: "{word}"
+        prompt = f"""Correct any accent errors in this French text: "{word}"
         
-        Important rules:
+       Important rules:
         1. Return ONLY the corrected French text with proper accents (é, è, ê, ë, à, â, ä, ç, î, ï, ô, ö, ù, û, ü, ÿ)
         2. Do not change correct accents that are already present
         3. If the input has no accent errors, return it exactly as-is
@@ -85,9 +86,11 @@ class LLMUtils:
         5. Preserve all capitalization, spaces, and punctuation exactly as in the input
         6. Do not modify the text in any way other than correcting accents
         7. Do not add any additional quotes or formatting
+        
         Return ONLY the corrected text:"""
         
         response = self.llms["french_accent_correction"].invoke(prompt).content.strip()
+        response = re.sub(r'^[\'"]|[\'"]$', '', response)
         response = re.sub(r'^[\'"]|[\'"]$', '', response)
         return response
         
@@ -103,12 +106,37 @@ class LLMUtils:
         4. Return ONLY the example sentence without any additional text or explanation
         5. Do not add english translation or commentary
         6. Sentence should be french only
+        7. Randomlize the example sentence to avoid repetition
         """
         
         response = self.llms["word_helper"].invoke(prompt).content.strip()
         response = re.sub(r'\([^)]*\)', '', response)
         response = re.sub(r'^[\'"]|[\'"]$', '', response)
 
+
+        return response
+    
+    def youtube_french_sentence_generator(self, transcript: str) -> List[str]:
+        """From the youtube transcript txt file, create complete sentences in French using the given sentence"""
+        prompt = f"""Generate complete and grammatically correct French sentences from the following YouTube transcript. 
+                The transcript may contain incomplete phrases, filler words, or fragmented speech. 
+                Please create well-formed, coherent French sentences that capture the meaning of the original content.
+
+                Transcript:
+                {transcript}
+
+                Instructions:
+                - Convert fragmented speech into complete sentences
+                - Remove filler words and hesitations
+                - Maintain the original meaning and context
+                - Ensure proper French grammar and sentence structure
+                - Return each sentence on a new line
+                - Do not add explanations or comments, only return the sentences"""
+        
+
+        
+        response = self.llms["youtube_transcript_generator"].invoke(prompt).content.strip()
+    
 
         return response
             

@@ -3,7 +3,8 @@ from typing import List, Tuple
 import random
 from config.settings import TRANSCRIPT_EN, TRANSCRIPT_FR
 import streamlit as st
-
+from youtube_transcript_api import YouTubeTranscriptApi
+from config.settings import TRANSCRIPT_YOUTUBE
 
 class TranscriptManager:
     
@@ -26,6 +27,11 @@ class TranscriptManager:
             raise Exception(f"Transcript file not found: {file_path}")
         except Exception as e:
             raise Exception(f"Error loading transcript: {str(e)}")
+        
+    def load_youtube_transcript(self,file_path:Path) -> str:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
+            return content
         
     def _validate_pairs(self):
         """Verify English and French transcripts have matching lengths"""
@@ -53,6 +59,25 @@ class TranscriptManager:
             st.session_state.index_pointer = 0
 
         return self.english_sentences[idx], self.french_sentences[idx]
+    
+    def extract_transcript(self, video_id: str):
+        
+        ytt_api = YouTubeTranscriptApi()
+        fetched_transcript = ytt_api.fetch(video_id, languages=["fr"])
+        sentences = []
+        for snippet in fetched_transcript:
+            sentences.append(snippet.text)
+        transcript = " ".join(sentences)
+        try:
+            with open(TRANSCRIPT_YOUTUBE, "w", encoding="utf-8") as file:
+                file.write(transcript)
+                print(f"Transcript saved to {TRANSCRIPT_YOUTUBE}")
+        except IOError as e:
+            print(f"An error occurred while writing to the file: {e}")
+
+
+
+        
 
 
 transcript_manager = TranscriptManager()
